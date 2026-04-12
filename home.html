@@ -42,7 +42,9 @@
             <img src="./assets/logo.png" alt="logo" />
           </div>
           <div class="balance-info pl-2">
-            <h2 class="text-2xl font-bold gap-1">$ <span id="balance">45000</span></h2>
+            <h2 class="text-2xl font-bold gap-1">
+              $ <span id="balance">45000</span>
+            </h2>
             <p class="text-neutral/50 gap-1">Available Balance</p>
           </div>
         </div>
@@ -97,6 +99,70 @@
       </div>
     </section>
 
+    <section id="add-money" class="w-11/12 mx-auto py-5">
+      <h2 class="text-xl font-bold">Add money</h2>
+      <div class="form">
+        <div class="card bg-base-100 w-full shadow rounded-2xl mt-4">
+          <div class="card-body">
+            <fieldset class="fieldset">
+              <label class="label text-[#080808] text-[16px] font-medium"
+                >Select a Bank</label
+              >
+              <select
+                class="select rounded-full bg-[#f4f5f7] border-none w-full text-gray-400"
+                id="add-money-bank"
+              >
+                <option disabled selected class="">Select bank</option>
+                <option value="DBBL">DBBL</option>
+                <option value="Bank Asia">Bank Asia</option>
+                <option value="Trust Bank">Trust Bank</option>
+              </select>
+
+              <label class="label text-[#080808] text-[16px] font-medium"
+                >Bank Account Number</label
+              >
+              <input
+                id="add-money-number"
+                maxlength="11"
+                minlength="11"
+                type="text"
+                class="input rounded-full bg-[#f4f5f7] w-full border-none"
+                placeholder="Enter 11 digit account number"
+              />
+              <label class="label text-[#080808] text-[16px] font-medium"
+                >Amount to Add</label
+              >
+              <input
+                id="add-money-amount"
+                maxlength="11"
+                minlength="11"
+                type="text"
+                class="input rounded-full bg-[#f4f5f7] w-full border-none"
+                placeholder="Add Amount to Add"
+              />
+              <label class="label text-[#080808] text-[16px] font-medium"
+                >Pin Number</label
+              >
+              <input
+                id="add-money-pin"
+                maxlength="4"
+                minlength="4"
+                type="password"
+                class="input rounded-full bg-[#f4f5f7] w-full border-none"
+                placeholder="Enter 4 Digit Pin Number"
+              />
+              <button
+                id="add-money-btn"
+                class="btn btn-neutral mt-4 bg-[#3B25C1] rounded-full text-[20px] font-semibold py-6"
+              >
+                Add Money
+              </button>
+            </fieldset>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section id="cashout" class="w-11/12 mx-auto py-5">
       <h2 class="text-xl font-bold">Cashout</h2>
       <div class="form">
@@ -147,6 +213,8 @@
         </div>
       </div>
     </section>
+
+    <script src="./script/addMoney.js"></script>
 
     <script src="./script/machine.js"></script>
 

@@ -7,11 +7,9 @@ document.getElementById("cashout-btn").addEventListener("click", function () {
 
   const cashoutAmount = getValueFromInput("cashout-amount");
 
-  const balanceElement = document.getElementById("balance");
-  const balance = balanceElement.innerText;
-  console.log(balance);
+  const currentBalance = getBalance();
 
-  const newBalance = Number(balance) - Number(cashoutAmount);
+  const newBalance = currentBalance - Number(cashoutAmount);
   console.log(newBalance);
   if (newBalance < 0) {
     alert("Invalid Input");
@@ -21,7 +19,7 @@ document.getElementById("cashout-btn").addEventListener("click", function () {
   const pin = getValueFromInput("cashout-pin");
   if (pin == "1234") {
     alert("Cashout Success");
-    balanceElement.innerText = newBalance;
+    setValue(newBalance);
   } else {
     alert("Invalid pin");
     return;
